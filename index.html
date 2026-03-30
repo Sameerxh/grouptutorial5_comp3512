@@ -43,8 +43,35 @@
             const li = document.createElement('li');
             li.textContent = book.title + ' by ' + book.author;
             bookList.appendChild(li);
-
          }
+
+         // Get view element
+         const bookListView = document.querySelector('#bookListView');
+         const addBookView = document.querySelector('#addBookView');
+
+         //
+         // Get buttons
+         const btnViewBooks = document.querySelector('#btnViewBooks');
+         const btnAddBook = document.querySelector('#btnAddBook');
+
+         //Function to show Book List view
+
+         function showBookListView() {
+            bookListView.style.display = 'block';
+            addBookView.style.display = 'none';
+         }
+
+         //  Function to show Add Book view
+         function showAddBookView() {
+            bookListView.style.display = 'none';
+            addBookView.style.display = 'block';
+         }
+
+         // Add event listeners to buttons
+         btnViewBooks.addEventListener('click', showBookListView);
+         btnAddBook.addEventListener('click', showAddBookView);
+
+
 
     </script>
 </body>
