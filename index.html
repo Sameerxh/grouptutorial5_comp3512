@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1>Favorite Books</h1>
-
+    <ul id="bookList"></ul>
     <script>
         const jsonString = `[
          { "title": "1984", "author": "George Orwell" },
@@ -18,6 +18,13 @@
 
          let books = JSON.parse(jsonString);
          console.log(books);
+         const bookList = document.querySelector('#bookList');
+         for (let book of books) {
+            const li = document.createElement('li');
+            li.textCintent = book.title + ' by ' + book.author;
+            bookList.appendChild(li);
+
+         }
 
     </script>
 </body>
