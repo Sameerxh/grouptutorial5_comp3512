@@ -9,16 +9,16 @@
 
     <!-- Nav buttons -->
      <button id="btnViewBooks">View Books</button>
-     <button id="btnAddBooks">Add Book</button>
+     <button id="btnAddBook">Add Book</button>
 
      <!-- Book List -->
-      <div id="bookListView"
+      <div id="bookListView">
         <h2>Book List</h2>
         <ul id=""bookList"></ul>
     </div>
 
     <!-- Add Book Form -->
-     <div id=""addBookView" style="display: none;">
+     <div id="addBookView" style="display: none;">
         <h2>Add a New Book</h2>
         <label>Title: <input type="text" id="titleInput"></label><br><br>
         <label>Author: <input type="text" id="authorInput"></label><br><br>
@@ -26,7 +26,6 @@
     </div>
     
 
-    <ul id="bookList"></ul>
     <script>
         const jsonString = `[
          { "title": "1984", "author": "George Orwell" },
