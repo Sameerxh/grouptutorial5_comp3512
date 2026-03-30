@@ -70,6 +70,34 @@
          btnViewBooks.addEventListener('click', showBookListView);
          btnAddBook.addEventListener('click', showAddBookView);
 
+         // function to make Add book usable
+
+         const titleInput = document.querySelector('#titleInput');
+         const authorInput = document.querySelector('#authorInput');
+         const btnSubmitBook = document.querySelector('#btnSubmitBook');
+
+         btnSubmitBook.addEventListener('click', function() {
+            // Get value from Input
+            const newTitle = titleInput.value;
+            const newAuthor = authorInput.value;
+
+            // Create new book and add to array list
+            const newBook = {
+                title: newTitle,
+                author: newAuthor
+            
+            };
+            book.push(newBook);
+
+            // Clear form
+
+            titleInput.value = '';
+            authorInput.value = '';
+
+            // Switch to list view and show updated list
+            displayBooks();
+            showBookListView();
+        });
 
 
     </script>
